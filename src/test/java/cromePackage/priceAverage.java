@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -44,8 +45,15 @@ public class priceAverage {
 	
 	@Test(dependsOnMethods="searchRefrigerator")
 		public void filter() {
-			driver.findElement(By.xpath("(//span[@class='MuiIconButton-label'])[2]")).click();
-//			driver.findElement(By.xpath("//div[@class='sort-by-category']//li[@class='item']//span[text()=\"LG\"]")).click();
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));	
+		 WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='MuiIconButton-label'])[2]")));
+		    dropdown.click();
+		    
+		    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='SAMSUNG']"))); 
+		    option.click();
+			
+
 			
 		}
 	
