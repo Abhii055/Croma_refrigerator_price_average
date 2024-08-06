@@ -2,68 +2,68 @@
 <testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-06T01:48:32 IST" name="Default suite" finished-at="2024-08-06T01:48:48 IST" duration-ms="16708">
+  <suite started-at="2024-08-06T08:45:42 IST" name="Default suite" finished-at="2024-08-06T08:46:19 IST" duration-ms="37248">
     <groups>
     </groups>
-    <test started-at="2024-08-06T01:48:32 IST" name="Default test" finished-at="2024-08-06T01:48:48 IST" duration-ms="16708">
+    <test started-at="2024-08-06T08:45:42 IST" name="Default test" finished-at="2024-08-06T08:46:19 IST" duration-ms="37248">
       <class name="cromePackage.priceAverage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:32 IST" name="setUp" finished-at="2024-08-06T01:48:34 IST" duration-ms="2262" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:45:42 IST" name="setUp" finished-at="2024-08-06T08:45:44 IST" duration-ms="2155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invokeBrowser()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:34 IST" name="invokeBrowser" finished-at="2024-08-06T01:48:41 IST" duration-ms="6962" status="PASS">
+        <test-method signature="invokeBrowser()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:45:44 IST" name="invokeBrowser" finished-at="2024-08-06T08:45:53 IST" duration-ms="8871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method signature="searchRefrigerator()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:41 IST" name="searchRefrigerator" finished-at="2024-08-06T01:48:46 IST" depends-on-methods="cromePackage.priceAverage.invokeBrowser" duration-ms="5338" status="PASS">
+        <test-method signature="searchRefrigerator()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:45:53 IST" name="searchRefrigerator" finished-at="2024-08-06T08:45:55 IST" depends-on-methods="cromePackage.priceAverage.invokeBrowser" duration-ms="2649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchRefrigerator -->
-        <test-method signature="filter()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:46 IST" name="filter" finished-at="2024-08-06T01:48:47 IST" depends-on-methods="cromePackage.priceAverage.searchRefrigerator" duration-ms="761" status="PASS">
+        <test-method signature="filter()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:45:55 IST" name="filter" finished-at="2024-08-06T08:46:08 IST" depends-on-methods="cromePackage.priceAverage.searchRefrigerator" duration-ms="12894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter -->
-        <test-method signature="getPriceOf10Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:47 IST" name="getPriceOf10Product" finished-at="2024-08-06T01:48:47 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="108" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPriceOf10Product -->
-        <test-method signature="getPriceOf1Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:47 IST" name="getPriceOf1Product" finished-at="2024-08-06T01:48:47 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="103" status="PASS">
+        <test-method signature="getPriceOf1Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:08 IST" name="getPriceOf1Product" finished-at="2024-08-06T08:46:08 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf1Product -->
-        <test-method signature="getPriceOf2Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:47 IST" name="getPriceOf2Product" finished-at="2024-08-06T01:48:47 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="79" status="PASS">
+        <test-method signature="getPriceOf2Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:08 IST" name="getPriceOf2Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf1Product" duration-ms="10069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf2Product -->
-        <test-method signature="getPriceOf3Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:47 IST" name="getPriceOf3Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="68" status="PASS">
+        <test-method signature="getPriceOf3Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf3Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf2Product" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf3Product -->
-        <test-method signature="getPriceOf4Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf4Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="69" status="PASS">
+        <test-method signature="getPriceOf4Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf4Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf3Product" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf4Product -->
-        <test-method signature="getPriceOf5Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf5Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="71" status="PASS">
+        <test-method signature="getPriceOf5Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf5Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf4Product" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf5Product -->
-        <test-method signature="getPriceOf6Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf6Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="386" status="PASS">
+        <test-method signature="getPriceOf6Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf6Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf5Product" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf6Product -->
-        <test-method signature="getPriceOf7Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf7Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="148" status="PASS">
+        <test-method signature="getPriceOf7Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf7Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf6Product" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf7Product -->
-        <test-method signature="getPriceOf8Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf8Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="70" status="PASS">
+        <test-method signature="getPriceOf8Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf8Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf7Product" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf8Product -->
-        <test-method signature="getPriceOf9Product()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="getPriceOf9Product" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.filter" duration-ms="122" status="PASS">
+        <test-method signature="getPriceOf9Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf9Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf8Product" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPriceOf9Product -->
-        <test-method signature="Average()[pri:0, instance:cromePackage.priceAverage@57a78e3]" started-at="2024-08-06T01:48:48 IST" name="Average" finished-at="2024-08-06T01:48:48 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf10Product" duration-ms="2" status="PASS">
+        <test-method signature="getPriceOf10Product()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="getPriceOf10Product" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf9Product" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPriceOf10Product -->
+        <test-method signature="Average()[pri:0, instance:cromePackage.priceAverage@402c4085]" started-at="2024-08-06T08:46:19 IST" name="Average" finished-at="2024-08-06T08:46:19 IST" depends-on-methods="cromePackage.priceAverage.getPriceOf10Product" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Average -->

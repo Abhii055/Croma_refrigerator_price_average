@@ -19,9 +19,9 @@ public class priceAverage {
 	int[] pricelist = new int[11];
 	@BeforeClass
 	public void setUp() {
-		
+
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhin\\eclipse-workspace\\libs\\chromedriver.exe");
-	        
+
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -34,126 +34,132 @@ public class priceAverage {
 	@Test(dependsOnMethods = "invokeBrowser")
 	public void searchRefrigerator() {
 		driver.navigate().refresh();
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	    // Wait for the search input to be visible and enter the search term
-	    WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("searchV2")));
-	    searchInput.sendKeys("refrigerator");
-	    searchInput.sendKeys(Keys.RETURN);
-	    driver.navigate().refresh();
+		// Wait for the search input to be visible and enter the search term
+		WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("searchV2")));
+		searchInput.sendKeys("refrigerator");
+		searchInput.sendKeys(Keys.RETURN);
+//		driver.navigate().refresh();
 	}
-	
+
 	@Test(dependsOnMethods="searchRefrigerator")
-		public void filter() {
+	public void filter() throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));	
+		WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='MuiIconButton-label'])[2]")));
+		dropdown.click();
+		Thread.sleep(10000);
+		WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='SAMSUNG']"))); 
+		option.click();  
+//		driver.navigate().refresh();
+		//
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));	
-		 WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='MuiIconButton-label'])[2]")));
-		    dropdown.click();
-		    
-		    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='SAMSUNG']"))); 
-		    option.click();
-			
 
-			
-		}
-	
-	
+	}
+
+
 	@Test(dependsOnMethods ="filter")
 	public void getPriceOf1Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[1]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[0] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[0] =price;
 	}
-	@Test(dependsOnMethods ="filter")
-	public void getPriceOf2Product() {
+
+	@Test(dependsOnMethods ="getPriceOf1Product")
+	public void getPriceOf2Product() throws Exception {
+		Thread.sleep(10000);
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[2]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[2] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[2] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+
+	@Test(dependsOnMethods ="getPriceOf2Product")
 	public void getPriceOf3Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[3]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[3] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[3] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+
+	@Test(dependsOnMethods ="getPriceOf3Product")
 	public void getPriceOf4Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[4]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[4] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[4] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+	@Test(dependsOnMethods ="getPriceOf4Product")
 	public void getPriceOf5Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[5]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[5] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[5] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+	@Test(dependsOnMethods ="getPriceOf5Product")
 	public void getPriceOf6Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[6]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[6] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[6] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+	@Test(dependsOnMethods ="getPriceOf6Product")
 	public void getPriceOf7Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[7]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[7] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[7] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+	@Test(dependsOnMethods ="getPriceOf7Product")
 	public void getPriceOf8Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[8]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[8] =price;
-	}@Test(dependsOnMethods ="filter")
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[8] =price;
+	}@Test(dependsOnMethods ="getPriceOf8Product")
 	public void getPriceOf9Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[9]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[9] =price;
-	
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[9] =price;
 	}
-	@Test(dependsOnMethods ="filter")
+
+	@Test(dependsOnMethods ="getPriceOf9Product")
 	public void getPriceOf10Product() {
 		String l = driver.findElement(By.xpath("(//span[@class='amount plp-srp-new-amount'])[10]")).getText();
-	System.out.println(l);
-	String numericString = l.replaceAll("[₹,]","");
-	int price =  Integer.parseInt(numericString);
-	pricelist[10] =price;
+		System.out.println(l);
+		String numericString = l.replaceAll("[₹,]","");
+		int price =  Integer.parseInt(numericString);
+		pricelist[10] =price;
 	}
+
+
 	@Test(dependsOnMethods ="getPriceOf10Product")
 	public void Average() {
 		int sum=0;
 		int average=0;
 		int n= 0;
 		for(int i =0;  i<pricelist.length;i++) {
-			 sum=sum+pricelist[i];
-			 n=i;
-			 
+			sum=sum+pricelist[i];
+			n=i;
+
 		}
-         		average = sum/n;
-         		System.out.println(sum);
-         		System.out.println(n);
-         		System.out.println(average);
+		average = sum/n;
+		System.out.println(sum);
+		System.out.println(n);
+		System.out.println(average);
 	}
-	
+
 }
 
 

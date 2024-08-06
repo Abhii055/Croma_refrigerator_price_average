@@ -9,17 +9,17 @@
           <include name="getPriceOf1Product"/>
           <include name="searchRefrigerator"/>
           <include name="getPriceOf5Product"/>
-          <include name="setUp"/>
           <include name="getPriceOf2Product"/>
+          <include name="setUp"/>
           <include name="getPriceOf3Product"/>
-          <include name="getPriceOf8Product"/>
           <include name="getPriceOf7Product"/>
+          <include name="getPriceOf8Product"/>
           <include name="getPriceOf4Product"/>
-          <include name="getPriceOf9Product"/>
           <include name="getPriceOf6Product"/>
+          <include name="getPriceOf9Product"/>
           <include name="getPriceOf10Product"/>
-          <include name="Average"/>
           <include name="invokeBrowser"/>
+          <include name="Average"/>
         </methods>
       </class> <!-- cromePackage.priceAverage -->
     </classes>
